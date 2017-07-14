@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+  var data = [
+    {"year": 2010, "name":"Delaware", "value": 2999.6874},
+    {"year": 2011, "name":"Delaware", "value": 2927.4638},
+    {"year": 2012, "name":"Delaware", "value": 2715.4008},
+    {"year": 2013, "name":"Delaware", "value": 2835.0069},
+    {"year": 2014, "name":"Delaware", "value": 2780.2801},
+    {"year": 2010, "name":"WestVirginia", "value": 7012.761},
+    {"year": 2011, "name":"WestVirginia", "value": 7440.555},
+    {"year": 2012, "name":"WestVirginia", "value": 7232.046},
+    {"year": 2013, "name":"WestVirginia", "value": 6746.145},
+    {"year": 2014, "name":"WestVirginia", "value": 5968.72},
+    {"year": 2010, "name":"Arkansas", "value": 11180.705},
+    {"year": 2011, "name":"Arkansas", "value": 10882.49},
+    {"year": 2012, "name":"Arkansas", "value": 10474.186},
+    {"year": 2013, "name":"Arkansas", "value": 9695.913},
+    {"year": 2014, "name":"Arkansas", "value": 9000.71}
+  ]
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("box")
+    .id("name")
+    .x("year")
+    .y("value")
+    .time("year")
+    .ui([{
+        "label": "A Chart Showing 4 Groupings of Top 3 States with High Readmissions",
+        "method": "type",
+        "value": ["scatter","box"]
+      }])
+    .draw()
+</script>
+</html>
