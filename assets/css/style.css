@@ -85,3 +85,8 @@ footer.page-footer {
 		width: 600px;
 		background-color: lightgrey;
 }
+
+#header {
+  border-color: teal;
+  border-width: 10px;
+}
