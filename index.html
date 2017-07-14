@@ -34,7 +34,7 @@
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
-      <div class="container" id="headercontainer">
+      <div class="container" id="header">
         <br><br>
         <h1 class="header teal-text text-lighten-2">Readmission</h1>
         <div class="row">
@@ -51,7 +51,39 @@
 
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
+       <div class="row">
+        <div class="col s12">
+          <div class="card teal">
+            <div class="card-content white-text">
+              <span class="card-title">Summary</span>
+
+              <p>
+When a patient visits a facility that provides health care services -such as a hospital or a nursing home- he or she may leave that same day or spend several days over there.
+For those folks who stay for more than a day, they are called admitted patients or that an admission has occurred. 
+ </p>
+<br>
+<p>
+Increasingly, government agencies, primary care physicians, patients and other stake holders are now very interested not just in the admission of patients but what happens after such a person leaves the facility too.
+ </p><br><p>
+The discharge of these recipients of medical treatment is not the only consideration for a provider to get a reimbursement for the services they offered. Nowadays a new measure is also reviewed. This is called Re-admissions.
+ </p><br><p>
+We begin with a Bar Chart – a graph showing the number of counts of readmissions - that shows the top three states who on average have too many revisits. They are West Virginia, Delaware and Arkansas.
+ </p><br><p>
+Next we explore to see whether other variables are driving these high counts in these top three states. We first look at income or average salary. The second factor we consider is average age.
+              </p>
+
+             <!--  <p>Medicare alone currently spends $15 billion a year on rehospitalizations, and in 2004 estimated the total cost to be $17.4 billion. These tallies do not account for the intangible strain high readmissions put on hospitals or the distress and dissatisfaction caused to patients who repeatedly find themselves back in the hospital. But a whopping three-quarters of readmissions could likely be avoided with better care, reported a 2007 congressional report by the Medicare Payment Advisory Commission. And hospitals, insurance companies, and the US Congress have taken notice. Specifically, under the federal healthcare law, the Centers for Medicare and Medicaid (CMS) services are using  a 30-day cutoff to penalize hospitals with higher than expected rates of readmissions and may ultimately refuse payment for selected diagnoses that occur within this timeframe. Health reform legislation also initiates a closer look at global payment systems, with a number of pilot projects that include reimbursement per diagnosis as opposed to each service, including readmissions, related to a diagnosis. The causes of readmissions vary widely. While in some cases, patients’ conditions may unavoidably get worse, many patients return to the hospital quickly because of an error that occurred during their first visit.</p>
+              <p>
+              Data reveals that certain populations should be targeted for federal health education programs aimed at curbing hospital readmissions. See the data below to see if you can spot the trends!
+              </p> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!-- <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center teal-text"><i class="material-icons">flash_on</i></h2>
             <h5 class="center">Speeds up development</h5>
@@ -76,7 +108,7 @@
 
             <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
           </div>
-        </div>
+        </div> -->
       </div>
 
     </div>
@@ -87,21 +119,28 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light" id="quotes">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light" id="quotes">In October 2012, CMS began reducing Medicare payments for Inpatient Prospective Payment System (IPPS) hospitals with excess readmissions. Excess readmissions are measured by a ratio, by dividing a hospital’s number of “predicted” 30-day readmissions for heart attack, heart failure, pneumonia, COPD, hip/knee replacement, and coronary artery bypass graft surgery by the number that would be “expected,” based on an average hospital with similar patients. A ratio greater than 1.0000 indicates excess readmissions.</h5>
         </div>
       </div>
     </div>
     <div class="parallax"><img src="assets/images/doctors.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
-  <div class="container">
+  <div class="container col s12">
     <div class="section">
       	<div class="row">
-        	<div class="col s12 center">
-
-
-        	<div id="viz" class="chart"></div>
-
+        	<div class="col s9" id="chart1">
+        			<div id="viz" class="chart z-depth-4">
+        			</div>
+	            </div>
+	            <div class="col s3" id="charttext1">
+	            	<div class="card teal">
+            			<div class="card-content white-text">
+              				<span class="card-title">Summary</span>
+              				<p>this is where our summary goes</p>
+              				</div>
+              			</div>
+              		</div>
 	            </div>
 	        </div>
 	    </div>
@@ -112,7 +151,8 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light" id="quotes">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light" id="quotes">At least 20 percent of all
+				patients who are admitted to a U.S. hospital make a repeat visit within 30 days of discharge, according to Medicare and others who’ve studied the pervasive problem of hospital readmissions.</h5>
         </div>
       </div>
     </div>

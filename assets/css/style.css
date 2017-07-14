@@ -90,3 +90,11 @@ footer.page-footer {
   border-color: teal;
   border-width: 10px;
 }
+
+#chart1 {
+  float:left;
+}
+
+#charttext1 {
+  float:left;
+}
