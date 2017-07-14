@@ -73,4 +73,29 @@ var nameLookup;
         .shapeConfig(arcStyles)
         .render()
 
-      });
+
+      var settingsScatterAge = {
+        data: "https://api.datausa.io/api/join/?show=geo&sumlevel=state&required=age,pop,patients_readmitted_within_30_days_of_discharge&year=latest&order=patients_readmitted_within_30_days_of_discharge&sort=asc&cohort=surgical",
+            groupBy: "acs_5yr.yg.geo",
+            label: function(d) {
+                return nameLookup[d["acs_5yr.yg.geo"]];
+            },
+            select: "#viz3",
+            y: function(d) {
+                return d["acs_5yr.yg.age"];
+            },
+            x: function(d) {
+                if (d["acs_5yr.yg.pop"])
+                    return d["dartmouth.ygc_post_discharge.patients_readmitted_within_30_days_of_discharge"] / d["acs_5yr.yg.pop"];
+            }
+
+            
+      };
+
+      var ageScatterChart = new d3plus.Plot()
+      ageScatterChart
+      .config(settingsScatterAge)
+      .shapeConfig(arcStyles)
+      .render()
+      
+});
