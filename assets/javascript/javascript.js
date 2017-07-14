@@ -12,7 +12,7 @@ var nameLookup;
         var chart = new d3plus.BarChart();
 
         var settings = {
-          data: "https://api.datausa.io/api/?show=geo&sumlevel=state&required=patients_readmitted_within_30_days_of_discharge&year=latest",
+          data: "https://api.datausa.io/api/join/?show=geo&sumlevel=state&required=pop,patients_readmitted_within_30_days_of_discharge&year=latest&order=patients_readmitted_within_30_days_of_discharge&sort=asc&cohort=surgical",
           discrete: "y",
           groupBy: "geo",
           label: function(d) {
@@ -20,16 +20,16 @@ var nameLookup;
           },
           select: "#viz",
           y: function(d) {
-            return d.geo;
+            return d["acs_5yr.yg.geo"];
           },
           x: function(d) {
-            return d.patients_readmitted_within_30_days_of_discharge;
+            return d["dartmouth.ygc_post_discharge.patients_readmitted_within_30_days_of_discharge"] / d["acs_5yr.yg.pop"];
           }
         };
 
         var arcStyles = {
           fill: function(d) {
-            if (d.geo == "01000US") {
+            if ( (d["dartmouth.ygc_post_discharge.patients_readmitted_within_30_days_of_discharge"] / d["acs_5yr.yg.pop"]) > .007 ) {
               return "#85bc25";
             }
             else {
@@ -41,6 +41,12 @@ var nameLookup;
         chart
           .config(settings)
           .shapeConfig(arcStyles)
+          .yConfig({
+            tickFormat: function(d) {
+                return nameLookup[d];
+            }
+
+          })
           .render();
 
 
