@@ -29,7 +29,7 @@ var nameLookup;
 
         var arcStyles = {
           fill: function(d) {
-            if ( (d["dartmouth.ygc_post_discharge.patients_readmitted_within_30_days_of_discharge"] / d["acs_5yr.yg.pop"]) > .007 ) {
+            if ( (d["dartmouth.ygc_post_discharge.patients_readmitted_within_30_days_of_discharge"] / d["acs_5yr.yg.pop"]) > .0007 ) {
               return "#85bc25";
             }
             else {
