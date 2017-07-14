@@ -74,3 +74,21 @@ var nameLookup;
         .render()
 
       });
+
+      var settingsScatterAge = {
+        data: "https://api.datausa.io/api/join/?show=geo&sumlevel=state&required=income,pop,patients_readmitted_within_30_days_of_discharge&year=latest&order=patients_readmitted_within_30_days_of_discharge&sort=asc&cohort=surgical",
+            groupBy: "acs_5yr.yg.geo",
+            label: function(d) {
+                return nameLookup[d["acs_5yr.yg.geo"]];
+            },
+            select: "#viz2",
+            y: function(d) {
+                return d["acs_5yr.yg.age"];
+            },
+            x: function(d) {
+                if (d["acs_5yr.yg.pop"])
+                    return d["dartmouth.ygc_post_discharge.patients_readmitted_within_30_days_of_discharge"] / d["acs_5yr.yg.pop"];
+            }
+
+
+      };
