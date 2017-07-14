@@ -73,9 +73,17 @@ footer.page-footer {
 }
 
 
+<<<<<<< HEAD
 #quotes {
   background-color: white;
   color: teal;
   padding:10px;
   border-radius: 25px;
+=======
+.chart {
+    height: 600px;
+		width: 600px;
+		background-color: lightgrey;
+
+>>>>>>> 535d24fc835977e5f03895f59fb5a59fa8291589
 }
