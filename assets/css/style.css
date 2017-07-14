@@ -71,3 +71,11 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+
+#quotes {
+  background-color: white;
+  color: teal;
+  padding:10px;
+  border-radius: 25px;
+}
