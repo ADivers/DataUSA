@@ -47,6 +47,12 @@ var nameLookup;
             }
 
           })
+              .xConfig(
+          {
+              title: "30 day hospital readmissions / population"
+          }
+      )
+      .yConfig({title: "State"})
           .render();
 
 
@@ -71,6 +77,12 @@ var nameLookup;
         incomeScatterChart
         .config(settingsScatter)
         .shapeConfig(arcStyles)
+        .xConfig(
+          {
+              title: "30 day hospital readmissions / population"
+          }
+      )
+      .yConfig({title: "Average income"})
         .render()
 
 
@@ -88,7 +100,7 @@ var nameLookup;
                 if (d["acs_5yr.yg.pop"])
                     return d["dartmouth.ygc_post_discharge.patients_readmitted_within_30_days_of_discharge"] / d["acs_5yr.yg.pop"];
             }
-
+            
             
       };
 
@@ -96,6 +108,12 @@ var nameLookup;
       ageScatterChart
       .config(settingsScatterAge)
       .shapeConfig(arcStyles)
+      .xConfig(
+          {
+              title: "30 day hospital readmissions / population"
+          }
+      )
+      .yConfig({title: "Average age"})
       .render()
       
 });
