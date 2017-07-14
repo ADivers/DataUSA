@@ -139,62 +139,6 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 </body>
 
-
-<script type="text/javascript">
-	
-    	d3.json("https://api.datausa.io/attr/geo", function(error,data) {
-    		console.log(data);
-    		data = d3plus.dataFold(data);
-    		console.log(data);
-    		var nameLookup = data.reduce(function(obj, d){
-    			obj[d.id] = d.display_name;
-    			return obj;
-    		} {});
-    		console.log(data);
-    	})
-
-
-console.log(d3plus);
-
-var myDataArray = 'https://api.datusa.io/api/?show=geo&geo=01000US,04000US25&required=year, income'
-
-console.log(myDataArray);
-
-var chart = new d3plus.BarChart();
-var settings = {
-	data: myDataArray,
-	discrete: 'y', 
-	groupBy: "geo",
-	select: "#viz",
-	x: function(d) {
-		return d.year;
-	},
-	y: function(d) {
-		return d.income;
-	}
-}
-
-var arcStyles = {
-	fill:function(d) {
-		if (d.id =="01000US"){
-			return "orange";
-		}
-		else 
-			{return "maroon";}
-	}
-}
-
-chart
-.config(settings)
-.shapeConfig(arcStyles)
-.render();
-
-
-
-
-</script>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/javascript/materialize.js"></script>
 <script src="assets/javascript/init.js"></script>
